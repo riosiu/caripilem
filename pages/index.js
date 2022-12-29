@@ -21,8 +21,8 @@ export default function Home() {
       return (
         <>
           <div key={i}>
-            <div className="bg-teal-500 w-96 p-2 rounded-xl gap-2">
-              <div className="text-xl font-bold font-fira p-2 mt-auto">
+            <div className="bg-teal-500 w-96 p-2 rounded-xl gap-8 mb-5">
+              <div className="text-lg font-bold font-fira p-2 mt-auto">
                 {movie.title}
               </div>
               <img
@@ -44,9 +44,11 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className="w-screen text-center items-center">
-          <h1>Populer Film Saat Ini</h1>
-          <div className="flex flex-wrap w-full justify-center gap-4">
+        <div className="w-screen text-center items-center flex flex-col gap-10">
+          <h1 className="mt-auto p-2 text-5xl font-bold text-slate-700">
+            Populer Film Saat Ini
+          </h1>
+          <div className="flex flex-wrap w-full justify-center gap-8">
             <PopularMovieList />
           </div>
         </div>
