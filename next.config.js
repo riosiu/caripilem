@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+module.exports = async (phase, { defaultConfig }) => {
+  const nextConfig = {
+    reactStrictMode: true,
+    images: {
+      images: [process.env.NEXT_PUBLIC_APP_IMAGESRC],
+    },
+  };
+
+  return nextConfig;
+};
